@@ -22,7 +22,9 @@ public class PlayerCharacter : MonoBehaviour
 
     public float maxJumpSpeed = 15f;
 
-    public float rotateSpeed = 1f;
+    public float rotateSpeed = 3f;
+
+    public float mouseRotateSpeed = 5f;
 
     public float scaleSpeed = 1f;
 
@@ -162,7 +164,7 @@ public class PlayerCharacter : MonoBehaviour
 
         // Rotate mouse left or right to rotate left or right 
         
-        float rotation = Input.GetAxis("Mouse X") * rotateSpeed; 
+        float rotation = Input.GetAxis("Mouse X") * mouseRotateSpeed; 
 
         transform.Rotate(0,rotation,0);
 
