@@ -33,7 +33,7 @@ public class PlayerCharacter : MonoBehaviour
     public float timeSinceLastJump;
 
     public float jumpCooldownTime = 2f;
-
+    
     private Rigidbody myRigidbody; 
 
     // Start is called before the first frame update
