@@ -22,7 +22,7 @@ public class PlayerCharacter : MonoBehaviour
 
     public float maxJumpSpeed = 15f;
 
-    public float rotateSpeed = 3f;
+    public float rotateSpeed = 2f;
 
     public float mouseRotateSpeed = 5f;
 
