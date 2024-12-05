@@ -18,4 +18,14 @@ public class Restart : MonoBehaviour
     {
         
     }
+
+    public void titleScreen()
+    {
+
+    }
+
+    public void resetToLastLevel()
+    {
+        
+    }
 }
