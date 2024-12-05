@@ -17,7 +17,12 @@ public class Collisions : MonoBehaviour
 
     public int playerLives = 3;
 
-    public Vector3 start = (0.0f,0.5f,0.0f);
+    public int livesChange = 1;
+
+    public string newLivesText;
+
+    public TextMeshProUGUI livesDisplay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +34,8 @@ public class Collisions : MonoBehaviour
     {
         if (playerHealth < 10)
         {
-            playerLives = playerLives -1;
-            playerHealth = 100;
-            transform.position = start;
+            livesChanger();
         }
-        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -43,6 +45,22 @@ public class Collisions : MonoBehaviour
             playerHealth = playerHealth - 10;
             newHealthPointsText = "" + playerHealth;
             healthDisplay.text = newHealthPointsText;
+        }
+    }
+
+    private void livesChanger()
+    {
+        playerLives = playerLives -1;
+        newLivesText = "" + playerLives;
+        livesDisplay.text = newLivesText;
+        playerHealth = 100;
+        transform.position = new Vector3(0f,0.5f,0f);
+        newHealthPointsText = "" + playerHealth;
+        healthDisplay.text = newHealthPointsText;
+
+        if (playerLives < 1)
+        {
+            SceneManager.LoadScene(4);
         }
     }
 
