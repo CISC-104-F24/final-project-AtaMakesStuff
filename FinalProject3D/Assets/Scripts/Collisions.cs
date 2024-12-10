@@ -23,10 +23,12 @@ public class Collisions : MonoBehaviour
 
     public TextMeshProUGUI livesDisplay;
 
+    public static int previousSceneNumber;
+
     // Start is called before the first frame update
     void Start()
     {
-    
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -60,8 +62,14 @@ public class Collisions : MonoBehaviour
 
         if (playerLives < 1)
         {
-            SceneManager.LoadScene(4);
+            previousSceneNumber = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(3);
         }
+    }
+
+    private void loadPreviousScene()
+    {
+        SceneManager.LoadScene(previousSceneNumber);
     }
 
 }

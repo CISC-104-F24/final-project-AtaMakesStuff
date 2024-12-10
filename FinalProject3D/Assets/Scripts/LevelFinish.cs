@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class Restart : MonoBehaviour
+public class LevelFinish : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,8 @@ public class Restart : MonoBehaviour
         
     }
 
-    public void titleScreen()
+    private void OnTriggerEnter(Collider other)
     {
-
-    }
-
-    public void resetToLastLevel()
-    {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
