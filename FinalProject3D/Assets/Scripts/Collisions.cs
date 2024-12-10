@@ -67,7 +67,7 @@ public class Collisions : MonoBehaviour
         }
     }
 
-    private void loadPreviousScene()
+    public void loadPreviousScene()
     {
         SceneManager.LoadScene(previousSceneNumber);
     }
