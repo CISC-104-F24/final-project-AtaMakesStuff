@@ -7,14 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Title Screen.unity
-    guid: b7fa29e81c9f84bff8bd6a22c4f96181
+    guid: af4666890b3cf4c6f9a9fd2ae198056a
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Win Screen.unity
-    guid: 9eb15e858ad934833b79ac87ff98abe8
+    path: Assets/Scenes/Level 2.unity
+    guid: 325ec93512fd146b1a4cb05cdd9cd6d1
   - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: b666741d4013f4056938f3c70a0aa4c1
+  - enabled: 0
     path: Assets/Scenes/Game Over Screen.unity
     guid: 598e9948627e54433b9d35370fa9253f
   m_configObjects: {}

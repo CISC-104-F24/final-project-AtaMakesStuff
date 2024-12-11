@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - Instructions1
   - Instructions2
+  - KillBox
   layers:
   - Default
   - TransparentFX

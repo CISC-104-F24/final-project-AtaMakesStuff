@@ -127,6 +127,11 @@ public class Collisions : MonoBehaviour
         {
             instructions3.SetActive(true);
         }
+
+        if(other.gameObject.CompareTag("KillBox"))
+        {
+            livesChanger();
+        }
     }
 
 }
