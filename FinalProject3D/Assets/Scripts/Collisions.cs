@@ -43,6 +43,12 @@ public class Collisions : MonoBehaviour
 
     public GameObject livesNumbers;
 
+    public GameObject flag1;
+
+    public GameObject flag2;
+
+    public GameObject flag3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +58,7 @@ public class Collisions : MonoBehaviour
         titleScreenText.SetActive(false);
         retryButton.SetActive(false);
         retryText.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -95,6 +102,9 @@ public class Collisions : MonoBehaviour
             healthNumbers.SetActive(false);
             livesText.SetActive(false);
             livesNumbers.SetActive(false);
+            flag1.SetActive(false);
+            flag2.SetActive(false);
+            flag3.SetActive(false);
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCharacter
   - Hazard
+  - hide
   layers:
   - Default
   - TransparentFX
