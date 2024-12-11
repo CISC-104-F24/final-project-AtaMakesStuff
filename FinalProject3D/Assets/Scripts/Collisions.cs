@@ -49,6 +49,12 @@ public class Collisions : MonoBehaviour
 
     public GameObject flag3;
 
+    public GameObject instructions1;
+
+    public GameObject instructions2;
+
+    public GameObject instructions3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +64,8 @@ public class Collisions : MonoBehaviour
         titleScreenText.SetActive(false);
         retryButton.SetActive(false);
         retryText.SetActive(false);
+        instructions2.SetActive(false);
+        instructions3.SetActive(false);
 
     }
 
@@ -105,6 +113,19 @@ public class Collisions : MonoBehaviour
             flag1.SetActive(false);
             flag2.SetActive(false);
             flag3.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Instructions1"))
+        {
+            instructions2.SetActive(true);
+        }
+        
+        if(other.gameObject.CompareTag("Instructions2"))
+        {
+            instructions3.SetActive(true);
         }
     }
 
