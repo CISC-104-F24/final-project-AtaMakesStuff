@@ -55,6 +55,8 @@ public class Collisions : MonoBehaviour
 
     public GameObject instructions3;
 
+    private Rigidbody myRigidbody; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,7 @@ public class Collisions : MonoBehaviour
         retryText.SetActive(false);
         instructions2.SetActive(false);
         instructions3.SetActive(false);
+        myRigidbody = GetComponent<Rigidbody>();
 
     }
 
@@ -95,6 +98,7 @@ public class Collisions : MonoBehaviour
         livesDisplay.text = newLivesText;
         playerHealth = 100;
         transform.position = new Vector3(0f,0.5f,0f);
+        transform.rotation = Quaternion.identity;
         newHealthPointsText = "" + playerHealth;
         healthDisplay.text = newHealthPointsText;
 

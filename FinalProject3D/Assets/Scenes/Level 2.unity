@@ -6944,7 +6944,7 @@ MonoBehaviour:
   sprintSpeed: 20
   originalSpeed: 10
   distanceSprinted: 0
-  maxSprintTime: 5
+  maxSprintTime: 2
   jumpSpeed: 25
   originalJumpSpeed: 25
   powerGainedPerSecond: 1
