@@ -4071,7 +4071,7 @@ MonoBehaviour:
   instructions1: {fileID: 1425612263}
   instructions2: {fileID: 1213512608}
   instructions3: {fileID: 936734268}
-  timer: 60
+  timer: 1
   initialTimer: 0
   newTimerText: 
   timerDisplay: {fileID: 0}

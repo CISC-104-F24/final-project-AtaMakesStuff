@@ -57,7 +57,7 @@ public class Collisions : MonoBehaviour
 
     private Rigidbody myRigidbody; 
 
-    public float timer = 60;
+    public float timer = 20;
 
     public int initialTimer;
 
@@ -121,7 +121,7 @@ public class Collisions : MonoBehaviour
         transform.rotation = Quaternion.identity;
         newHealthPointsText = "" + playerHealth;
         healthDisplay.text = newHealthPointsText;
-        timer = 60;
+        timer = 20;
 
         if (playerLives < 1)
         {
