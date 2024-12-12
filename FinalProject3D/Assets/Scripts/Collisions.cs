@@ -57,6 +57,16 @@ public class Collisions : MonoBehaviour
 
     private Rigidbody myRigidbody; 
 
+    public float timer = 60;
+
+    public int initialTimer;
+
+    public string newTimerText;
+
+    public TextMeshProUGUI timerDisplay;
+
+    public GameObject timerText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +89,16 @@ public class Collisions : MonoBehaviour
         {
             livesChanger();
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            timerDecrease();
+            if (timer < 1)
+            {
+                livesChanger();
+            }
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -101,6 +121,7 @@ public class Collisions : MonoBehaviour
         transform.rotation = Quaternion.identity;
         newHealthPointsText = "" + playerHealth;
         healthDisplay.text = newHealthPointsText;
+        timer = 60;
 
         if (playerLives < 1)
         {
@@ -117,6 +138,7 @@ public class Collisions : MonoBehaviour
             flag1.SetActive(false);
             flag2.SetActive(false);
             flag3.SetActive(false);
+            timerText.SetActive(false);
         }
     }
 
@@ -136,6 +158,14 @@ public class Collisions : MonoBehaviour
         {
             livesChanger();
         }
+
+    }
+
+    public void timerDecrease() 
+    {
+        timer = timer - (1 * Time.deltaTime);
+        newTimerText = "" + timer.ToString("f0");
+        timerDisplay.text = newTimerText;
     }
 
 }
